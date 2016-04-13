@@ -27,7 +27,7 @@ def main():
     
     writer = None
     for row in csv.DictReader(sys.stdin, delimiter="\t"):
-        if writer == None:
+        if writer is None:
             writer = csv.DictWriter(sys.stdout, list(row.keys()) + ['text'],
                                     delimiter="\t")
             writer.writeheader()
